@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ibatorConfiguration PUBLIC "-//Apache Software Foundation//DTD Apache iBATIS Ibator Configuration 1.0//EN" "http://ibatis.apache.org/dtd/ibator-config_1_0.dtd" >
+<ibatorConfiguration >
+	<classPathEntry location="D:\maven_repo\mysql\mysql-connector-java\5.0.7\mysql-connector-java-5.0.7.jar"/>
+  <ibatorContext id="context1" >
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/mynetty" userId="root" password="root" >
+	</jdbcConnection>
+    <javaModelGenerator targetPackage="com.ygxhj.mynetty.core.model" targetProject="mynettyserver\src\main\java" />
+    <sqlMapGenerator targetPackage="com.ygxhj.mynetty.core.maps" targetProject="mynettyserver\src\main\resources" />
+    <daoGenerator targetPackage="com.ygxhj.mynetty.core.dao" targetProject="mynettyserver\src\main\java" type="GENERIC-CI" />
+	  
+	<table tableName="player">
+		<property name="rootClass" value="com.ygxhj.mynetty.core.BaseObject" />
+		<generatedKey column="id" sqlStatement="MySql" identity="true" />
+    </table>
+  </ibatorContext>
+</ibatorConfiguration>
+
+	
+
+
+

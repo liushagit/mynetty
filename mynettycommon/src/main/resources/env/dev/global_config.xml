@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+	<zone_id id="0" />
+	<zone id="0" name="测试一区" maxPlayerNum="0">
+		<db host="localhost" port="3306" dbname="mynetty" username="root" password="root" delaytime="0" />
+		<res host="localhost" port="3306" dbname="mynetty_res" username="root" password="root" />
+		<proxy host="localhost" port="8092" md5Key="mynetty" />
+	</zone>
+</root>
