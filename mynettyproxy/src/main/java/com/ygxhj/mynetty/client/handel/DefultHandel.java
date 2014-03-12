@@ -20,6 +20,8 @@ public class DefultHandel extends SimpleChannelHandler {
 		index += 2;
 		byte[] contexs = new byte[contex];
 		buffer.getBytes(index, contexs, 0, contex);
+		String string = new String(contexs,"utf-8");
+		System.out.println(string);
 
 	}
 

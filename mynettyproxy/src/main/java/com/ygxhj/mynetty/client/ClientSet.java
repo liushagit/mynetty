@@ -21,7 +21,7 @@ public class ClientSet {
 		return null;
 	}
 	
-	public void baceClient(Client client){
+	public void backClient(Client client){
 		requestQueue.add(client);
 	}
 }

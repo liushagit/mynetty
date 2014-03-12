@@ -6,8 +6,14 @@ import com.ygxhj.mynetty.config.GlobalConfig;
 import com.ygxhj.mynetty.config.Zone;
 import com.ygxhj.mynetty.server.command.CommandSet;
 import com.ygxhj.mynetty.work.WorkThread;
+//import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
 public class GameServer {
+	
+	
+	
+	
+	
 
 	private static Logger log = Logger.getLogger(GameServer.class);
 	public static void main(String[] args) {
@@ -35,6 +41,7 @@ public class GameServer {
 		beginPre = System.currentTimeMillis();
 		NettyServer server = new NettyServer();
 		server.init(zone.getProxyHost() ,zone.getProxyPort());
+		log.info("init netty server :" + zone.getProxyHost() + ":" + zone.getProxyPort());
 		log.debug("init NettyServer end " + (System.currentTimeMillis() - beginPre) + "ms");
 		
 		//4、初始化DB
@@ -49,5 +56,34 @@ public class GameServer {
 		}
 	}
 	
+	
+	
+	
+//	public static void main(String[] args) {
+//		File file = new File("d:\\phoneName.txt");
+//		BufferedReader buffer;
+//		PrintWriter pw;
+//		try {
+//			buffer = new BufferedReader(new FileReader(file));
+//			String s = null;
+//			Map<String, String> map = new HashMap<String, String>();
+//			String sssss[];
+//			while ((s = buffer.readLine()) != null) {
+//				System.out.println(s);
+//				sssss = s.split("_");
+//				map.put(sssss[1], sssss[1]);
+//			}
+//			
+//			pw = new PrintWriter(new File("d:\\phoneName_t.txt"));
+//			for (String ss : map.values()) {
+//				pw.println(ss);
+//			}
+//			pw.flush();
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}finally{
+//		}
+//		
+//	}
 	
 }

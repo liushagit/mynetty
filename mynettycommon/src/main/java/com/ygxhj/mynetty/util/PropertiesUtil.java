@@ -1,5 +1,7 @@
 package com.ygxhj.mynetty.util;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -24,6 +26,9 @@ public class PropertiesUtil {
 		InputStream inputStream = null;
 		try {
 			inputStream = PropertiesUtil.class.getClassLoader().getResourceAsStream(fileName);
+			if (inputStream == null) {
+				inputStream = new FileInputStream(new File(fileName));
+			}
 			properties.load(inputStream);
 		} catch (Exception e) {
 			log.error("exception", e);

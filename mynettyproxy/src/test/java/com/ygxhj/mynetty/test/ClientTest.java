@@ -18,7 +18,7 @@ public class ClientTest {
 		clientServer.initClient();
 
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(10);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
